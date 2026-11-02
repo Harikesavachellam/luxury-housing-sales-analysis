@@ -1,0 +1,16 @@
+{
+  "records": 100000,
+  "builders": 11,
+  "markets": 16,
+  "missing_prices": 9918,
+  "missing_sizes": 10457,
+  "price_per_sqft_available": 80614,
+  "filled_amenity_scores": 10000,
+  "price_outlier_records": 1552,
+  "observed_amenity_price_pairs": 81084,
+  "amenity_price_correlation": 0.0019508388291577666,
+  "average_ticket_price_cr": 12.719806256725503,
+  "median_ticket_price_cr": 12.038618970710633,
+  "recorded_ticket_value_cr": 1145825.5872183468,
+  "booking_status_available": false
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "booking_explanation",
+  "position": {
+    "x": 20,
+    "y": 185,
+    "width": 1240,
+    "height": 120,
+    "z": 40,
+    "tabOrder": 40
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "The supplied dataset has no Booking_Status column. All 100,000 outcomes remain Unknown. Booking counts, booking conversion, booked ticket value, and amenity-to-booking relationships cannot be established from this source.",
+                    "textStyle": {
+                      "fontSize": "18px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

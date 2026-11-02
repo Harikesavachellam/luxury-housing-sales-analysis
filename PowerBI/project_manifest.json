@@ -1,0 +1,10 @@
+{
+  "pages": 4,
+  "visuals": 48,
+  "tables": 4,
+  "relationships": 3,
+  "measures": 22,
+  "source": "MySQL",
+  "storage_mode": "Import",
+  "native_desktop_verified": false
+}

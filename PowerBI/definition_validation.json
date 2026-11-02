@@ -1,0 +1,8 @@
+{
+  "schema_documents_validated": 56,
+  "field_references_checked": 72,
+  "visual_bounds_checked": 48,
+  "relationship_references_checked": 3,
+  "native_desktop_verified": false,
+  "note": "Schema/reference checks do not verify native Power BI rendering, DAX execution, or connector refresh."
+}

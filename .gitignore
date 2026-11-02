@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+*.credentials*
+*credentials*.json
+LOCAL_DATABASE_ACCESS.txt
+.mysql*
+mysql_client.cnf
+*.zip
+work/
+.PowerBI/
+**/.pbi/

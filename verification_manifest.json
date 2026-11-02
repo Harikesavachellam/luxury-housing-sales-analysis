@@ -1,0 +1,16 @@
+{
+  "project": "Luxury Housing Sales Analysis - Bengaluru",
+  "prepared_date": "2026-11-02",
+  "source_data_sha256": "b4d9576577598aa32eaa6feb91a7e36cf7c8a42113097bbc6d74134f50c9fd34",
+  "cleaned_data_sha256": "5c904b74d742798a7a374393aceb6b95ad18241511764fb16f80df7eff666124",
+  "cleaned_records": 100000,
+  "mysql_pipeline_verified": true,
+  "database_restore_verified": true,
+  "eda_completed": true,
+  "powerbi_schema_verified": true,
+  "powerbi_model_deserialization_verified": true,
+  "powerbi_desktop_verified": false,
+  "booking_outcomes_available": false,
+  "github_published": false,
+  "native_powerbi_screenshots_included": false
+}

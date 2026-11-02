@@ -1,0 +1,8 @@
+{
+  "model_deserialization": "passed",
+  "tables": 4,
+  "relationships": 3,
+  "measures": 22,
+  "dax_execution_verified": false,
+  "desktop_verified": false
+}

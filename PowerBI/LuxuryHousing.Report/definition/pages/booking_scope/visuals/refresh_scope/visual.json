@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "refresh_scope",
+  "position": {
+    "x": 20,
+    "y": 885,
+    "width": 1240,
+    "height": 85,
+    "z": 48,
+    "tabOrder": 48
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "MySQL uses Import mode: refresh to update the report. This project has been checked against Microsoft report-definition schemas; Power BI Desktop rendering and refresh still require verification.",
+                    "textStyle": {
+                      "fontSize": "14px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

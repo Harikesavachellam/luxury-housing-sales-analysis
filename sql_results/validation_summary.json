@@ -1,0 +1,18 @@
+{
+  "mysql_version": "8.4.3",
+  "raw_rows": 101000,
+  "cleaned_rows": 100000,
+  "loaded_sql_rows": 100000,
+  "duplicates_removed": 1000,
+  "missing_prices": 9918,
+  "missing_unit_sizes": 10457,
+  "known_booking_outcomes": 0,
+  "recorded_ticket_value_cr": 1145825.5872183356,
+  "sql_python_ticket_total_match": true,
+  "orphan_dimension_keys": 0,
+  "dimension_rows": {
+    "dim_builder": 11,
+    "dim_market": 16,
+    "dim_quarter": 8
+  }
+}

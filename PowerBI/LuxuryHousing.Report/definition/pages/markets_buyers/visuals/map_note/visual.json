@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "map_note",
+  "position": {
+    "x": 20,
+    "y": 860,
+    "width": 1240,
+    "height": 90,
+    "z": 22,
+    "tabOrder": 22
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Locations use source locality names, not verified coordinates. Project names may repeat. Buyer records describe observed composition, not proven booking demand.",
+                    "textStyle": {
+                      "fontSize": "14px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

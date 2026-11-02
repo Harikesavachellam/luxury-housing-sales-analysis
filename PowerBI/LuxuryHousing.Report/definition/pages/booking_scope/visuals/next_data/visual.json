@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "next_data",
+  "position": {
+    "x": 20,
+    "y": 705,
+    "width": 1240,
+    "height": 160,
+    "z": 47,
+    "tabOrder": 47
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "To enable these measures, obtain genuine Booked/Not Booked outcomes and rerun the pipeline in a new database. Review any other status labels with the instructor before extending the mapping. Primary/Secondary transaction type does not determine booking success.",
+                    "textStyle": {
+                      "fontSize": "16px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

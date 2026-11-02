@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
+  "pageOrder": [
+    "overview",
+    "markets_buyers",
+    "pricing_quality",
+    "booking_scope"
+  ],
+  "activePageName": "overview"
+}

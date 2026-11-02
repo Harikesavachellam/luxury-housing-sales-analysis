@@ -1,0 +1,5 @@
+Comment_Sentiment,Record_Count,Priced_Records,Recorded_Ticket_Value_Cr,Average_Ticket_Price_Cr,Median_Price_Per_Sqft
+Negative,27453,24712,314906.597,12.7431,20020.78
+Neutral,8900,8051,102334.2713,12.7108,19956.13
+No comment,18099,16248,205342.34,12.638,20169.91
+Positive,45548,41071,523242.379,12.7399,20049.13

@@ -1,0 +1,7 @@
+,Ticket_Price_Cr,Unit_Size_Sqft,Amenity_Score,Connectivity_Score,Locality_Infra_Score,Avg_Traffic_Time_Min
+Ticket_Price_Cr,1.0,0.0036,0.002,0.0016,0.0003,-0.0026
+Unit_Size_Sqft,0.0036,1.0,-0.0056,0.0034,-0.0001,-0.0047
+Amenity_Score,0.002,-0.0056,1.0,-0.0039,0.0035,0.0007
+Connectivity_Score,0.0016,0.0034,-0.0039,1.0,0.0003,0.001
+Locality_Infra_Score,0.0003,-0.0001,0.0035,0.0003,1.0,0.0054
+Avg_Traffic_Time_Min,-0.0026,-0.0047,0.0007,0.001,0.0054,1.0

@@ -1,0 +1,65 @@
+Total Records =
+COALESCE(COUNTROWS(housing_sales), 0)
+
+Recorded Ticket Value Cr =
+SUM(housing_sales[Ticket_Price_Cr])
+
+Average Ticket Price Cr =
+AVERAGE(housing_sales[Ticket_Price_Cr])
+
+Median Ticket Price Cr =
+MEDIAN(housing_sales[Ticket_Price_Cr])
+
+Average Price Per Sqft =
+AVERAGE(housing_sales[Price_per_Sqft])
+
+Median Price Per Sqft =
+MEDIAN(housing_sales[Price_per_Sqft])
+
+Priced Records =
+COALESCE(COUNT(housing_sales[Ticket_Price_Cr]), 0)
+
+Missing Price Records =
+[Total Records] - [Priced Records]
+
+Missing Size Records =
+[Total Records] - COUNT(housing_sales[Unit_Size_Sqft])
+
+Price Coverage =
+DIVIDE([Priced Records], [Total Records])
+
+Filled Amenity Records =
+SUM(housing_sales[Amenity_Score_Was_Missing])
+
+Price Outlier Records =
+SUM(housing_sales[Ticket_Price_Outlier])
+
+Known Booking Outcomes =
+COALESCE(COUNT(housing_sales[Booking_Flag]), 0)
+
+Booking Count =
+IF([Known Booking Outcomes] > 0, SUM(housing_sales[Booking_Flag]), BLANK())
+
+Booking Conversion Rate =
+DIVIDE([Booking Count], [Known Booking Outcomes])
+
+Booked Ticket Value Cr =
+CALCULATE(SUM(housing_sales[Ticket_Price_Cr]), housing_sales[Booking_Flag] = 1)
+
+Project Name Count =
+DISTINCTCOUNT(housing_sales[Project_Name])
+
+Observed Amenity Average =
+CALCULATE(AVERAGE(housing_sales[Amenity_Score]), housing_sales[Amenity_Score_Was_Missing] = 0, NOT ISBLANK(housing_sales[Ticket_Price_Cr]))
+
+Observed Price Average Cr =
+CALCULATE(AVERAGE(housing_sales[Ticket_Price_Cr]), housing_sales[Amenity_Score_Was_Missing] = 0)
+
+Observed Price Amenity Pairs =
+CALCULATE(COUNT(housing_sales[Ticket_Price_Cr]), housing_sales[Amenity_Score_Was_Missing] = 0)
+
+Builder Rank =
+RANKX(ALLSELECTED(dim_builder[Builder]), [Recorded Ticket Value Cr], , DESC, DENSE)
+
+Top 5 Builder Value Cr =
+IF([Builder Rank] <= 5, [Recorded Ticket Value Cr], BLANK())

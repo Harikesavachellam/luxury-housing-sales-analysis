@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "price_scope",
+  "position": {
+    "x": 20,
+    "y": 945,
+    "width": 1240,
+    "height": 45,
+    "z": 35,
+    "tabOrder": 35
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Amenity comparison excludes filled scores. Keyword labels are simple rules, not a trained model. Outlier flags identify review candidates; observations are retained.",
+                    "textStyle": {
+                      "fontSize": "14px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

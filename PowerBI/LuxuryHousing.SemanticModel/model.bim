@@ -1,0 +1,518 @@
+{
+  "name": "LuxuryHousing",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "tables": [
+      {
+        "name": "housing_sales",
+        "columns": [
+          {
+            "name": "Property_ID",
+            "dataType": "string",
+            "sourceColumn": "Property_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Micro_Market",
+            "dataType": "string",
+            "sourceColumn": "Micro_Market",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "Project_Name",
+            "dataType": "string",
+            "sourceColumn": "Project_Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Builder",
+            "dataType": "string",
+            "sourceColumn": "Builder",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "Unit_Size_Sqft",
+            "dataType": "double",
+            "sourceColumn": "Unit_Size_Sqft",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Configuration",
+            "dataType": "string",
+            "sourceColumn": "Configuration",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ticket_Price_Cr",
+            "dataType": "double",
+            "sourceColumn": "Ticket_Price_Cr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Transaction_Type",
+            "dataType": "string",
+            "sourceColumn": "Transaction_Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Buyer_Type",
+            "dataType": "string",
+            "sourceColumn": "Buyer_Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Purchase_Quarter",
+            "dataType": "dateTime",
+            "sourceColumn": "Purchase_Quarter",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "Connectivity_Score",
+            "dataType": "double",
+            "sourceColumn": "Connectivity_Score",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Amenity_Score",
+            "dataType": "double",
+            "sourceColumn": "Amenity_Score",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Possession_Status",
+            "dataType": "string",
+            "sourceColumn": "Possession_Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sales_Channel",
+            "dataType": "string",
+            "sourceColumn": "Sales_Channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NRI_Buyer",
+            "dataType": "string",
+            "sourceColumn": "NRI_Buyer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Locality_Infra_Score",
+            "dataType": "double",
+            "sourceColumn": "Locality_Infra_Score",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Avg_Traffic_Time_Min",
+            "dataType": "int64",
+            "sourceColumn": "Avg_Traffic_Time_Min",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Buyer_Comments",
+            "dataType": "string",
+            "sourceColumn": "Buyer_Comments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Amenity_Score_Was_Missing",
+            "dataType": "int64",
+            "sourceColumn": "Amenity_Score_Was_Missing",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Price_per_Sqft",
+            "dataType": "double",
+            "sourceColumn": "Price_per_Sqft",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Purchase_Year",
+            "dataType": "int64",
+            "sourceColumn": "Purchase_Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter_Number",
+            "dataType": "int64",
+            "sourceColumn": "Quarter_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "Fiscal_Year",
+            "dataType": "string",
+            "sourceColumn": "Fiscal_Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal_Quarter_Number",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal_Quarter_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal_Quarter",
+            "dataType": "string",
+            "sourceColumn": "Fiscal_Quarter",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "Fiscal_Quarter_Sort",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal_Quarter_Sort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ticket_Price_Outlier",
+            "dataType": "int64",
+            "sourceColumn": "Ticket_Price_Outlier",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Comment_Sentiment",
+            "dataType": "string",
+            "sourceColumn": "Comment_Sentiment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market_Location",
+            "dataType": "string",
+            "sourceColumn": "Market_Location",
+            "summarizeBy": "none",
+            "dataCategory": "Address"
+          },
+          {
+            "name": "Booking_Status",
+            "dataType": "string",
+            "sourceColumn": "Booking_Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Booking_Flag",
+            "dataType": "int64",
+            "sourceColumn": "Booking_Flag",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "housing_sales",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(MySQLServer, MySQLDatabase, [ReturnSingleDatabase=true]),",
+                "    Data = Source{[Schema=MySQLDatabase, Item=\"housing_sales\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Records",
+            "expression": "COALESCE(COUNTROWS(housing_sales), 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Recorded Ticket Value Cr",
+            "expression": "SUM(housing_sales[Ticket_Price_Cr])",
+            "formatString": "#,0.00"
+          },
+          {
+            "name": "Average Ticket Price Cr",
+            "expression": "AVERAGE(housing_sales[Ticket_Price_Cr])",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Median Ticket Price Cr",
+            "expression": "MEDIAN(housing_sales[Ticket_Price_Cr])",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Average Price Per Sqft",
+            "expression": "AVERAGE(housing_sales[Price_per_Sqft])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Median Price Per Sqft",
+            "expression": "MEDIAN(housing_sales[Price_per_Sqft])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Priced Records",
+            "expression": "COALESCE(COUNT(housing_sales[Ticket_Price_Cr]), 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Missing Price Records",
+            "expression": "[Total Records] - [Priced Records]",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Missing Size Records",
+            "expression": "[Total Records] - COUNT(housing_sales[Unit_Size_Sqft])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Price Coverage",
+            "expression": "DIVIDE([Priced Records], [Total Records])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Filled Amenity Records",
+            "expression": "SUM(housing_sales[Amenity_Score_Was_Missing])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Price Outlier Records",
+            "expression": "SUM(housing_sales[Ticket_Price_Outlier])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Known Booking Outcomes",
+            "expression": "COALESCE(COUNT(housing_sales[Booking_Flag]), 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Booking Count",
+            "expression": "IF([Known Booking Outcomes] > 0, SUM(housing_sales[Booking_Flag]), BLANK())",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Booking Conversion Rate",
+            "expression": "DIVIDE([Booking Count], [Known Booking Outcomes])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Booked Ticket Value Cr",
+            "expression": "CALCULATE(SUM(housing_sales[Ticket_Price_Cr]), housing_sales[Booking_Flag] = 1)",
+            "formatString": "#,0.00"
+          },
+          {
+            "name": "Project Name Count",
+            "expression": "DISTINCTCOUNT(housing_sales[Project_Name])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Observed Amenity Average",
+            "expression": "CALCULATE(AVERAGE(housing_sales[Amenity_Score]), housing_sales[Amenity_Score_Was_Missing] = 0, NOT ISBLANK(housing_sales[Ticket_Price_Cr]))",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Observed Price Average Cr",
+            "expression": "CALCULATE(AVERAGE(housing_sales[Ticket_Price_Cr]), housing_sales[Amenity_Score_Was_Missing] = 0)",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Observed Price Amenity Pairs",
+            "expression": "CALCULATE(COUNT(housing_sales[Ticket_Price_Cr]), housing_sales[Amenity_Score_Was_Missing] = 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Builder Rank",
+            "expression": "RANKX(ALLSELECTED(dim_builder[Builder]), [Recorded Ticket Value Cr], , DESC, DENSE)",
+            "formatString": "0"
+          },
+          {
+            "name": "Top 5 Builder Value Cr",
+            "expression": "IF([Builder Rank] <= 5, [Recorded Ticket Value Cr], BLANK())",
+            "formatString": "#,0.00"
+          }
+        ]
+      },
+      {
+        "name": "dim_builder",
+        "columns": [
+          {
+            "name": "Builder",
+            "dataType": "string",
+            "sourceColumn": "Builder",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_builder",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(MySQLServer, MySQLDatabase, [ReturnSingleDatabase=true]),",
+                "    Data = Source{[Schema=MySQLDatabase, Item=\"dim_builder\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_market",
+        "columns": [
+          {
+            "name": "Micro_Market",
+            "dataType": "string",
+            "sourceColumn": "Micro_Market",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Market_Location",
+            "dataType": "string",
+            "sourceColumn": "Market_Location",
+            "summarizeBy": "none",
+            "dataCategory": "Address"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_market",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(MySQLServer, MySQLDatabase, [ReturnSingleDatabase=true]),",
+                "    Data = Source{[Schema=MySQLDatabase, Item=\"dim_market\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_quarter",
+        "columns": [
+          {
+            "name": "Purchase_Quarter",
+            "dataType": "dateTime",
+            "sourceColumn": "Purchase_Quarter",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "Purchase_Year",
+            "dataType": "int64",
+            "sourceColumn": "Purchase_Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter_Number",
+            "dataType": "int64",
+            "sourceColumn": "Quarter_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "sortByColumn": "Purchase_Quarter"
+          },
+          {
+            "name": "Fiscal_Year",
+            "dataType": "string",
+            "sourceColumn": "Fiscal_Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal_Quarter_Number",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal_Quarter_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal_Quarter",
+            "dataType": "string",
+            "sourceColumn": "Fiscal_Quarter",
+            "summarizeBy": "none",
+            "sortByColumn": "Fiscal_Quarter_Sort"
+          },
+          {
+            "name": "Fiscal_Quarter_Sort",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal_Quarter_Sort",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_quarter",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(MySQLServer, MySQLDatabase, [ReturnSingleDatabase=true]),",
+                "    Data = Source{[Schema=MySQLDatabase, Item=\"dim_quarter\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "MySQLServer",
+        "kind": "m",
+        "expression": "\"127.0.0.1:33307\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "MySQLDatabase",
+        "kind": "m",
+        "expression": "\"luxury_housing\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Sales_to_Builder",
+        "fromTable": "housing_sales",
+        "fromColumn": "Builder",
+        "toTable": "dim_builder",
+        "toColumn": "Builder",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Sales_to_Market",
+        "fromTable": "housing_sales",
+        "fromColumn": "Micro_Market",
+        "toTable": "dim_market",
+        "toColumn": "Micro_Market",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Sales_to_Quarter",
+        "fromTable": "housing_sales",
+        "fromColumn": "Purchase_Quarter",
+        "toTable": "dim_quarter",
+        "toColumn": "Purchase_Quarter",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "DataLimitations",
+        "value": "Booking_Status is absent in the linked source. Booking measures return BLANK. MySQL is Import mode, not DirectQuery."
+      }
+    ]
+  }
+}

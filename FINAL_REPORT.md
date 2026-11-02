@@ -191,6 +191,6 @@ analysis. Confirm the source's sampling and provenance before generalizing.
 
 Verify the report in Power BI Desktop, capture native screenshots, and save the
 required format. Confirm the missing-booking-data treatment with the instructor.
-Publish the completed files to the chosen GitHub repository and submit its URL
-through the course portal and booking form. These external actions have not been
-performed during preparation.
+The project is published at https://github.com/Harikesavachellam/luxury-housing-sales-analysis.
+Submit that URL through the course portal and booking form after completing
+the remaining verification steps. Portal submission and booking have not been performed.

@@ -35,7 +35,7 @@
 - [ ] Save `LuxuryHousing.pbix` if required by the evaluator.
 - [ ] Confirm with the instructor how to handle the absent Booking_Status field
       and whether MySQL Import with refresh meets the brief's "live" wording.
-- [ ] Upload to your chosen GitHub repository and give the reviewer access.
+- [x] Published the public repository: https://github.com/Harikesavachellam/luxury-housing-sales-analysis
 - [ ] Enter the GitHub URL in the Zen portal and evaluation booking form.
 - [ ] Book the evaluation using the current course schedule.
 

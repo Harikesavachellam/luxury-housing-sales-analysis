@@ -20,7 +20,7 @@ No `.pbix` file is included. Open and verify the `.pbip` project, then save a
 
 The source has no booking outcomes. Those measures correctly remain unavailable.
 Instructor acceptance of the dataset limitation and the MySQL Import connection
-is still required. GitHub publication and course submission have not been done.
+is still required. The project is published at https://github.com/Harikesavachellam/luxury-housing-sales-analysis. Course submission has not been done.
 
 ## Files to start with
 
@@ -167,11 +167,11 @@ High positive prices remain in the dataset and are flagged for review.
 
 ## GitHub and submission
 
-The packaged project can be uploaded to your chosen GitHub repository. Do not
+The project is published at https://github.com/Harikesavachellam/luxury-housing-sales-analysis. Do not
 upload local database credentials, runtime binaries, or Python environment folders.
 The `.gitignore` excludes those. A local Git repository was prepared separately;
 the ZIP contains project files rather than `.git` internals.
 
 Read `SUBMISSION_CHECKLIST.md` before submitting. Final desktop verification,
-instructor clarification, repository publication, and portal submission remain
+instructor clarification and portal submission remain
 human/external steps; the documentation does not claim they have occurred.

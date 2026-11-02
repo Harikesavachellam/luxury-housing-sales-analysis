@@ -11,6 +11,7 @@
   "powerbi_model_deserialization_verified": true,
   "powerbi_desktop_verified": false,
   "booking_outcomes_available": false,
-  "github_published": false,
-  "native_powerbi_screenshots_included": false
+  "github_published": true,
+  "native_powerbi_screenshots_included": false,
+  "github_url": "https://github.com/Harikesavachellam/luxury-housing-sales-analysis"
 }
